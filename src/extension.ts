@@ -21,6 +21,8 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	context.subscriptions.push(disposable);
+
+	vscode.workspace.workspaceFile?.toJSON();
 }
 
 // this method is called when your extension is deactivated
