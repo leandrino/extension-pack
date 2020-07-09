@@ -2,7 +2,7 @@
 	"name": "aura-extension-pack",
 	"displayName": "aura-extension-pack",
 	"description": "A collection of extension that we use at Aura project.",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
@@ -11,12 +11,9 @@
 	],
 	"publisher": "leandrino",
 	"keywords": [
-	  "react",
-	  "typescript",
-	  "next",
-	  "styled-components",
-	  "graphql",
-	  "apollo"
+	  "lint",
+	  "prettier",
+	  "tag"
 	],
 	"galleryBanner": {
 		"color": "#030518",
@@ -26,14 +23,13 @@
 		"onCommand:aura-extension-pack.helloWorld"
 	],
 	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "aura-extension-pack.helloWorld",
-				"title": "Hello World"
-			}
-		]
+	"repository": {
+		"url": "https://github.com/leandrino/extension-pack"
 	},
+	"homepage": "https://github.com/leandrino/extension-pack",
+	"bugs": {
+		"url": "https://github.com/leandrino/extension-pack/issues"
+	  },
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
