@@ -2,7 +2,7 @@
 	"name": "aura-extension-pack",
 	"displayName": "aura-extension-pack",
 	"description": "A collection of extension that we use at Aura project.",
-	"version": "0.1.0",
+	"version": "0.2.4",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
@@ -15,12 +15,20 @@
 	  "prettier",
 	  "tag"
 	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "aura-extension-pack.syncSettings",
+				"title": "Aura Extension Pack Settings: Synchronize Settings"
+			}
+		]
+	},
 	"galleryBanner": {
 		"color": "#030518",
 		"theme": "dark"
 	},
 	"activationEvents": [
-		"onCommand:aura-extension-pack.helloWorld"
+		"onCommand:aura-extension-pack.syncSettings"
 	],
 	"main": "./out/extension.js",
 	"repository": {

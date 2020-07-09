@@ -4,26 +4,26 @@ import * as vscode from 'vscode';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
+var activatedState = false;
+
 export function activate(context: vscode.ExtensionContext) {
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "aura-extension-pack" is now active!');
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('aura-extension-pack.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
+	console.log('Congratulations, your extension "testextension" is now active!');
 
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from aura-extension-pack!');
+	let disposable = vscode.commands.registerCommand('aura-extension-pack.syncSettings', () => {
+
+		vscode.workspace.getConfiguration().update("editor.formatOnSave", true);
+		vscode.workspace.getConfiguration().update("editor.formatOnPaste", true);
+		vscode.workspace.getConfiguration().update("editor.codeActionsOnSave", {
+			"source.organizeImports": true
+		});
+
 	});
 
 	context.subscriptions.push(disposable);
-
-	vscode.workspace.workspaceFile?.toJSON();
 }
 
+
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }
