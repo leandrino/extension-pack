@@ -16,6 +16,7 @@ This command setup the format on save and organize imports:
     },
 }
 ```
-    - enter in command run `CTRL + Shift + P`
-    - search `Aura Extension Pack Settings: Synchronize Settings`
-    - enjoy!
+
+- enter in command run `CTRL + Shift + P`
+- search `Aura Extension Pack Settings: Synchronize Settings`
+- enjoy!
